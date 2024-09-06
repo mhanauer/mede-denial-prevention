@@ -13,7 +13,7 @@ def generate_data(num_rows):
         'Claim ID': claim_ids,
         'CPT Code': cpt_codes,
         'Diagnosis': diagnoses,
-        'Claim Denial Prediction (%)': [round(p, 2) for p in predictions]  # Round to 2 decimal places
+        'Claim Denial Prediction (%)': [round(p, 0) for p in predictions]  # Round to 0 decimal places
     }
     
     return pd.DataFrame(data)
@@ -25,7 +25,7 @@ df = generate_data(50)
 df_sorted = df.sort_values(by='Claim Denial Prediction (%)', ascending=False)
 
 # Title of the app
-st.title('Claim Denial Prediction Table (Sorted by Highest Likelihood of Denial)')
+st.title('Mede Claim Denial Prediction Demo')
 st.markdown("""This demo showcases Mede's denial prediction tool, helping providers assess the likelihood of a claim being denied before submission, thus reducing denial risks.""")
 
 # Display the DataFrame
