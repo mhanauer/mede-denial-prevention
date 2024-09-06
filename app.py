@@ -26,7 +26,8 @@ df_sorted = df.sort_values(by='Claim Denial Prediction (%)', ascending=False)
 
 # Title of the app
 st.title('Claim Denial Prediction Table (Sorted by Highest Likelihood of Denial)')
-st.markdown("""This demo showcases Mede's denial prediction tool, helping providers assess the likelihood of a claim being denied before submission, thus reducing denial risks. """")
+st.markdown("""This demo showcases Mede's denial prediction tool, helping providers assess the likelihood of a claim being denied before submission, thus reducing denial risks.""")
+
 # Display the DataFrame
 st.write('Displaying 50 rows of claim denial prediction data, sorted by highest likelihood of denial:')
 st.dataframe(df_sorted)
